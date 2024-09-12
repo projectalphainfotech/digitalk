@@ -1,7 +1,7 @@
 <template>
   <div class="landing-page">
     <header class="header">
-      <img src="https://placehold.co/600x400" alt="Hospital Logo" class="logo" />
+      <img src="../src/assets/LogoCurigen.png" alt="Hospital Logo" class="logo" />
       <h1 class="main-title">Welcome</h1>
       <p class="intro-text">We're here to assist you with all your needs. Please fill out the form below to
         get in touch with us.</p>
@@ -12,12 +12,12 @@
           <h1></h1>
           <div class="form-group">
             <label for="name">Shop Name:</label>
-            <input type="text" id="name" v-model="form.name" placeholder="Enter your Shop name" required />
+            <input type="text" id="name" v-model="form.shopeName" placeholder="Enter your Shop name" required />
           </div>
-          
+
           <div class="form-group">
             <label for="name">Owner Name:</label>
-            <input type="text" id="name" v-model="form.name" placeholder="Enter your name" required />
+            <input type="text" id="name" v-model="form.ownerName" placeholder="Enter your name" required />
           </div>
 
           <div class="form-group">
@@ -54,18 +54,17 @@ export default {
   data() {
     return {
       form: {
-        name: '',
+        shopeName: '',
+        ownerName: '',
         phone: '',
         city: '',
-        choice1: '',
-        choice2: ''
       }
     };
   },
   methods: {
     handleSubmit() {
       // Handle form submission
-      alert(`Name: ${this.form.name}\nPhone: ${this.form.phone}\nCity: ${this.form.city}\nChoice 1: ${this.form.choice1}\nChoice 2: ${this.form.choice2}`);
+      alert(`Name: ${this.form.shopeName}\nPhone: ${this.form.ownerName}\nphone:${this.form.phone}\nCity: ${this.form.city}`);
     }
   }
 };
@@ -88,15 +87,21 @@ body {
 
 .header {
   text-align: center;
-  padding: 40px;
+  padding: 2rem;
   background-color: #f4f4f4;
 }
 
 .logo {
   display: block;
-  margin: 0 auto 20px;
-  height: 150px;
-  border-radius: 100px;
+  margin: 0 auto 3rem;
+  height: auto;
+  max-width: 80%;
+}
+
+@media (min-width: 768px) {
+  .logo {
+    max-width: 50%;
+  }
 }
 
 .main-title {
@@ -114,12 +119,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.form-title {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 24px;
 }
 
 .simple-form {
