@@ -11,6 +11,10 @@
         <form @submit.prevent="handleSubmit">
           <h1></h1>
           <div class="form-group">
+            <label for="name">Shop Name:</label>
+            <input type="text" id="name" v-model="form.name" placeholder="Enter your Shop name" required />
+          </div>
+          <div class="form-group">
             <label for="name">Name:</label>
             <input type="text" id="name" v-model="form.name" placeholder="Enter your name" required />
           </div>
@@ -23,14 +27,16 @@
             <label for="city">City:</label>
             <input type="text" id="city" v-model="form.city" placeholder="Enter your city" required />
           </div>
-          <div class="form-group">
+
+          <!-- <div class="form-group">
             <label for="choice1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, tenetur!</label>
             <input type="text" id="choice1" v-model="form.choice1" placeholder="Enter first choice" />
           </div>
           <div class="form-group">
             <label for="choice2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, quibusdam.</label>
             <input type="text" id="choice2" v-model="form.choice2" placeholder="Enter second choice" />
-          </div>
+          </div> -->
+          
           <button type="submit" class="submit-button">Call Me Back</button>
         </form>
       </div>
@@ -89,7 +95,7 @@ body {
   margin: 0 auto 20px;
   height: 150px;
   border-radius: 100px;
-} 
+}
 
 .main-title {
   font-size: 36px;
@@ -115,7 +121,7 @@ body {
 }
 
 .simple-form {
-  margin:50px;
+  margin: 50px;
   max-width: 500px;
   width: 100%;
 }
