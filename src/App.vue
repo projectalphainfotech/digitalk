@@ -86,18 +86,10 @@ body {
 
 .logo {
   display: block;
-  height: 150px;
-  border-radius: 50px;
-}
-
-
-/* .logo {
-  display: block;
   margin: 0 auto 20px;
   height: 150px;
   border-radius: 100px;
-} */
-
+} 
 
 .main-title {
   font-size: 36px;
