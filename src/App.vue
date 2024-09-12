@@ -14,10 +14,12 @@
             <label for="name">Shop Name:</label>
             <input type="text" id="name" v-model="form.name" placeholder="Enter your Shop name" required />
           </div>
+          
           <div class="form-group">
-            <label for="name">Name:</label>
+            <label for="name">Owner Name:</label>
             <input type="text" id="name" v-model="form.name" placeholder="Enter your name" required />
           </div>
+
           <div class="form-group">
             <label for="phone">Phone Number:</label>
             <input type="tel" id="phone" v-model="form.phone" placeholder="Enter your phone number" required />
@@ -36,7 +38,7 @@
             <label for="choice2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, quibusdam.</label>
             <input type="text" id="choice2" v-model="form.choice2" placeholder="Enter second choice" />
           </div> -->
-          
+
           <button type="submit" class="submit-button">Call Me Back</button>
         </form>
       </div>
