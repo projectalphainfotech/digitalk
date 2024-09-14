@@ -9,7 +9,6 @@
     <section class="contact-form-section">
       <div class="simple-form">
         <form @submit.prevent="handleSubmit">
-          <h1></h1>
           <div class="form-group">
             <label for="name">Shop Name:</label>
             <input type="text" id="name" v-model="form.shopeName" placeholder="Enter your Shop name" required />
